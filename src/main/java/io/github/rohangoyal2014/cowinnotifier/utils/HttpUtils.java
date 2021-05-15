@@ -33,6 +33,7 @@ public class HttpUtils {
 		LOGGER.info("Request:" + reqBuilder.build().toString());
 		
 		try (Response response = client.newCall(reqBuilder.build()).execute()) {
+			LOGGER.info("Request was:" + response.request().toString());
 			return Pair.of(response.code(), response.body().string());
 		}
 	}
