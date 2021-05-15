@@ -64,7 +64,7 @@ public class DataFeedService {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		
 		Map<String, String> headers = new HashMap<>();
-		headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51");
+		headers.put("User-Agent", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/5311 (KHTML, like Gecko) Chrome/38.0.810.0 Mobile Safari/5311");
 		headers.put("Accept-Language", "en_IN");
 		
 		List<AvailableCentre> validCentres = new ArrayList<>();
