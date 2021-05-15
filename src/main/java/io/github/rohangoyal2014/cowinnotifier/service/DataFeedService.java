@@ -83,7 +83,7 @@ public class DataFeedService {
 					
 					if(response.getLeft() != 200) {
 						LOGGER.info("Unexpected Response from API:" + response.getLeft() + "content is: {}", response.getRight());
-						continue;
+						break;
 					}
 					
 					Centres centres = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
