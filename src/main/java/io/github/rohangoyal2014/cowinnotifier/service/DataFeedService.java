@@ -42,7 +42,7 @@ public class DataFeedService {
 	public DataFeedService(@Value("${cowin.url}") String url,
 							   @Value("${cowin.url.param.district-id-param}") String districtIdParam,
 							   @Value("${cowin.url.param.date-param}") String dateParam,
-							   @Qualifier("whatsapp-service") INotificationService notificationService,
+							   @Qualifier("telegram-service") INotificationService notificationService,
 							   AlertService alertService) {
 		this.url = url;
 		this.districtIdParam = districtIdParam;
@@ -98,8 +98,8 @@ public class DataFeedService {
 			}
 			notificationService.send(validCentres);
 		} catch (Exception e) {
-			LOGGER.info("Error:" + e, e);
-			alertService.alert("Error: " + e + "[" + e.getStackTrace() + "]");
+			LOGGER.error("Error:" + e, e);
+			alertService.alert("Error: " + e);
 		}
 	}
 

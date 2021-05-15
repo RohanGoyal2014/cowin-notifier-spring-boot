@@ -9,6 +9,7 @@ import io.github.rohangoyal2014.cowinnotifier.model.AvailableCentre;
 import io.github.rohangoyal2014.cowinnotifier.model.Centre;
 import io.github.rohangoyal2014.cowinnotifier.model.Centres;
 import io.github.rohangoyal2014.cowinnotifier.model.Session;
+import io.github.rohangoyal2014.cowinnotifier.service.AgeLimitService;
 
 public class FilteringUtils {
 
@@ -21,7 +22,7 @@ public class FilteringUtils {
 														centre.getDistrict(), 
 														centre.getState());
 			for(Session session : centre.getSessions()) {
-				if(!DataFeedConstants.SUPPORTED_AGE_LIMITS.contains(session.getMinAgeLimit()) 
+				if(!AgeLimitService.SUPPORTED_AGE_LIMITS.containsKey(session.getMinAgeLimit()) 
 						|| session.getAvailableCapacity() == 0) {
 					continue;
 				}
@@ -36,6 +37,7 @@ public class FilteringUtils {
 				availableCentre.setPinCode(centre.getPincode());
 				availableCentre.setTimeSlots(session.getTimeSlots());
 				availableCentre.setVaccineName(session.getVaccineName());
+				availableCentre.setAgeLimit(session.getMinAgeLimit());
 				
 				availableCentres.add(availableCentre);
 			}

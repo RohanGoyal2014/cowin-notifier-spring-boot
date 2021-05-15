@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.commons.lang3.tuple.Pair;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
@@ -11,6 +13,8 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class HttpUtils {
+	
+	public static final Logger LOGGER = LoggerFactory.getLogger(HttpUtils.class);
 	
 	public static final OkHttpClient client = new OkHttpClient();
 

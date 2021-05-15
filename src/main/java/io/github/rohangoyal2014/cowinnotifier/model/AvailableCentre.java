@@ -11,6 +11,7 @@ public class AvailableCentre {
 	private int availableCapacity;
 	private String vaccineName;
 	private String date;
+	private int ageLimit;
 	private List<String> timeSlots;
 
 	public String getName() {
@@ -77,11 +78,19 @@ public class AvailableCentre {
 		this.timeSlots = timeSlots;
 	}
 
+	public int getAgeLimit() {
+		return ageLimit;
+	}
+
+	public void setAgeLimit(int ageLimit) {
+		this.ageLimit = ageLimit;
+	}
+
 	@Override
 	public String toString() {
 		return "AvailableCentre [name=" + name + ", fullAddress=" + fullAddress + ", pinCode=" + pinCode + ", isPaid="
 				+ isPaid + ", availableCapacity=" + availableCapacity + ", vaccineName=" + vaccineName + ", date="
-				+ date + ", timeSlots=" + timeSlots + "]";
+				+ date + ", ageLimit=" + ageLimit + ", timeSlots=" + timeSlots + "]";
 	}
 
 }
