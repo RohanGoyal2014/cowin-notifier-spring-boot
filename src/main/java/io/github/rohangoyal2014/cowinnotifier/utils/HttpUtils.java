@@ -30,6 +30,8 @@ public class HttpUtils {
 			reqBuilder.addHeader(header.getKey(), header.getValue());
 		}
 		
+		LOGGER.info("Request:" + reqBuilder.build().toString());
+		
 		try (Response response = client.newCall(reqBuilder.build()).execute()) {
 			return Pair.of(response.code(), response.body().string());
 		}
