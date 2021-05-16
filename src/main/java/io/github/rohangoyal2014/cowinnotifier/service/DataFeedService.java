@@ -64,8 +64,17 @@ public class DataFeedService {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		
 		Map<String, String> headers = new HashMap<>();
-		headers.put("User-Agent", "Mozilla/5.0 (X11; Linux i686) AppleWebKit/5311 (KHTML, like Gecko) Chrome/38.0.810.0 Mobile Safari/5311");
-		headers.put("Accept-Language", "en_IN");
+		headers.put("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36");
+		headers.put("accept-language", "en-US,en;q=0.9");
+		headers.put("authority", "cdn-api.co-vin.in");
+		headers.put("sec-ch-ua", "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\"");
+		headers.put("accept", "application/json, text/plain, */*'");
+		headers.put("sec-ch-ua-mobile", "?0");
+		headers.put("origin", "https://www.cowin.gov.in");
+		headers.put("sec-fetch-site", "cross-site");
+		headers.put("sec-fetch-mode", "cors");
+		headers.put("sec-fetch-dest", "empty");
+		headers.put("referer", "https://www.cowin.gov.in/");
 		
 		List<AvailableCentre> validCentres = new ArrayList<>();
 		

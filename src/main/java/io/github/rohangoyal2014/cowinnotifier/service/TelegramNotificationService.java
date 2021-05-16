@@ -58,10 +58,8 @@ public class TelegramNotificationService implements INotificationService {
 		}
 
 		Map<String, String> headers = new HashMap<>();
-		headers.put("User-Agent",
-				"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.51");
-		headers.put("Accept-Language", "en_IN");
-		headers.put("Accept-Language", "en_IN");
+		headers.put("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36");
+		headers.put("accept-language", "en-US,en;q=0.9");
 
 		Map<String, String> params = new HashMap<>();
 		params.put(urlParamChatId, chatId);
